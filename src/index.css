@@ -1,4 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 body {
   margin: 0;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  outline: none;
+}
+input:focus {
+  border: 1px solid #42a5f5;
+  box-shadow: 0 0 0 2px #42a5f5;
+}
+
+main {
+  outline: none;
+  height: 100vh;
+  padding-top: 40px;
+  box-sizing: border-box;
+  transition: padding 0.4s cubic-bezier(0.64, 0.01, 0.09, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.topbarGone {
+  padding-top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.64, 0.01, 0.09, 1);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+nav.gone {
+  transform: translateY(-40px);
+}
+nav > div {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+nav > div.User {
+  gap: 10px;
+  font-size: 0.9em;
+}
+nav > div.User span:hover {
+  color: #1976d2;
+}
+
+.BasicFrame {
+  transition: 0s ease 0.3s;
+}
+
+.TypeableField {
+  transition: 0s ease 0.3s;
+  background: #fff;
+  border-radius: 20px;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+}
+.TypeableField .btnCtn {
+  display: flex;
+}
+.TypeableField .Field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.TypeableField .Field .btnCtn {
+  justify-content: flex-end;
+}
+.TypeableField .FieldCtn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.TypeableField .FieldCtn .labelCtn {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.TypeableField span {
+  font-size: 15px;
+  line-height: 35px;
+}
+.TypeableField .input {
+  border: 1px solid #D5D5D5;
+  border-radius: 18px;
+  min-height: 73px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.btn {
+  padding: 6px 46px;
+  border-radius: 40px;
+  line-height: 35px;
+  font-size: 15px;
+  border: 1px solid #000;
+}
+.btn.primary {
+  background: #000;
+  color: #fff;
+}
+.btn.ghost {
+  background: none;
+  color: #000;
+}
+
+.greetingMsg > div {
+  display: flex;
+  gap: 5px;
+}
+.greetingMsg span {
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+.Greeting {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }/*# sourceMappingURL=index.css.map */
