@@ -3,8 +3,9 @@ import { PyroContext } from "../context.js"
 import { useLocalstorageState } from "rooks"
 
 import {
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter,
+  Routes,
+  Route
 } from "react-router-dom"
 
 import { Resizable } from "react-resizable"
@@ -29,37 +30,6 @@ const {
   movieSearch,
 } = fileKeys
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: (
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    ),
-  },
-  {
-    path: basicFrameKey,
-    element: <BasicFrame/>,
-  },
-  {
-    path: typeableField,
-    element: <TypeableField/>,
-  },
-  {
-    path: responsiveFrame,
-    element: <ResponsiveFrame/>,
-  },
-  {
-    path: movieSearch,
-    element: <MovieSearch/>,
-  },
-  {
-    path: "*",
-    element: <IntuitPrivate/>,
-  },
-])
-
 const Content = () => {
   const { state:{
       protoWidth,
@@ -83,6 +53,7 @@ const Content = () => {
     setTopGap(topbarGone?0:40)
   },[topbarGone])
   return (  
+    <BrowserRouter>
         <Resizable
           maxConstraints={[window.innerWidth, window.innerHeight - topGap]}
           minConstraints={[minWidth, minHeight]}
@@ -95,9 +66,17 @@ const Content = () => {
               height:protoHeight
             }}
           >
-            <RouterProvider router={router} />
+              <Routes>
+                <Route path="/" element={<div><h1>Hello World</h1></div>} />
+                <Route path={basicFrameKey} element={<BasicFrame />} />
+                <Route path={typeableField} element={<TypeableField />} />
+                <Route path={responsiveFrame} element={<ResponsiveFrame />} />
+                <Route path={movieSearch} element={<MovieSearch />} />
+                <Route path="*" element={<IntuitPrivate />} />
+              </Routes>
           </div>
         </Resizable>
+      </BrowserRouter>
   )
 }
 
