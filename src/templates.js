@@ -26,7 +26,7 @@ const templates = {
         thumb:whiteboard
     },
     presentation:{
-        label:"Presentations",
+        label:"Presentations (16:9)",
         thumb:presentation
     },
     instagrampost:{
