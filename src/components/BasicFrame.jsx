@@ -34,9 +34,9 @@ const BasicFrame = () => {
     }
 
     useEffect(()=>{
-        dispatch({type:'SET_FILE_BG',payload:bg[basicFrameStep]})
-        dispatch({type:'SET_WIDTH',payload:defaultWidth[basicFrameStep]})
-        dispatch({type:'SET_HEIGHT',payload:defaultHeight[basicFrameStep]})
+        dispatch({type:'SET_FILE_BG',payload:bg[basicFrameStep === -1 ?0:basicFrameStep]})
+        dispatch({type:'SET_WIDTH',payload:defaultWidth[basicFrameStep === -1 ?0:basicFrameStep]})
+        dispatch({type:'SET_HEIGHT',payload:defaultHeight[basicFrameStep === -1 ?0:basicFrameStep]})
         incrementLayout()
     },[])
     
