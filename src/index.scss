@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+$teal:#59C1C8;
+$blue:#3069E1;
+$purple:#7946E4;
+.lightGradient{ background: linear-gradient(to right, $teal,$blue,$purple) }
+
+$darkteal:#357379;
+$darkblue:#1F3E88;
+$darkpurple:#492B89;
+.darkGradient{ background: linear-gradient(to right, $darkteal,$darkblue,$darkpurple) }
+
+.shortGradient{ background: linear-gradient(to right, #58BECA,#489DD3) }
+.blackNav{ 
+    display: flex;
+    background: #0D0D0D;
+    box-sizing: border-box;
+    img{
+        opacity: .5;
+        height: 17px;
+    }
+}
 body{
+
     margin: 0;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
@@ -139,4 +161,235 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+}
+.ResponsiveFrameCtn,
+.ResponsiveFrame,
+.Mobile,
+.Tablet,
+.Desktop {
+    height: 100%;
+}
+
+
+.Mobile,
+.Tablet,
+.Desktop {
+    background: #F9F9F9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tile {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,.05);
+    box-sizing: border-box;
+}
+
+.Mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .canvalogo{ width: 135px}
+    .MobileHead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 10px;
+        .icnCtn{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            
+        }
+        img{ height: 13px}
+    }
+    .mainContent{
+        flex:1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        .logoCtn{ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 162px;
+            width: 100%;
+        }
+    }
+    .tileCtn {
+        width: 100%;
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        gap: 10px;
+        box-sizing: border-box;
+        .tile{
+            width: 100%;
+            &:nth-of-type(1){flex: 1;}
+            &:nth-of-type(2){
+                border-radius: 14px 14px 0 0;
+                height: 83px;
+            }
+        }
+        &.second{
+            .tile{
+                
+                &:nth-of-type(1){
+                    height: 83px;
+                    flex: none;
+                }
+                &:nth-of-type(2){
+                    flex: 1;
+                }
+            }
+        }
+    }
+    .footer {
+        padding: 14px 30px;
+        gap: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.Desktop,
+.Tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gradientHeader {
+    display: flex;
+    flex-direction: column;
+    height: 81px;
+    > div{ flex:1}
+}
+.tabs {
+    display: flex;
+    gap: 2px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 10px 0 10px;
+    align-items: center;
+    > span {
+        opacity: .5;
+        color: #fff;
+        font-size: 1.25em;
+    }
+    .tab {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        border-radius: 7px 7px 0 0;
+        height: 100%;
+        &.low{opacity: .5}
+        span {
+            color: #fff;
+            font-size: 1.25em;
+            padding: 0 0 0 20px;
+        }
+    }
+}
+
+.header2 {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+    justify-content: space-between;
+    .iconCtn{
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        gap: 10px;
+    }
+    img{ height: 13px}
+}
+
+.tabletMain {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.BlackNav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 21px 10px;
+    .iconCtn{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        gap: 15px;
+        img{ width: 17px}
+    }
+}
+
+.TabletContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logoCtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 276px;
+    }
+    .tileCtn {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        .cropped {
+            flex: 1;
+            border-radius: 14px 14px 0 0;
+        }
+        .tiles {
+            height: 251px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            .tile{
+                flex: 1;
+            }
+        }
+    }
+}
+
+.DesktopContent {
+    flex: 1;
+    display: flex;
+}
+.viewport {
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    .logoCtn {
+        box-shadow: 0 10px 40px 0 rgba(0,0,0,.1);
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.AssetBank{
+    width: 327px;
+    padding: 10px;
+    background: #282828;
 }

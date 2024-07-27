@@ -7,11 +7,17 @@ const initialState = {
     fileBG:"#F2F2F2",
     fieldView:0,
     userName:"",
+    breakpoint:0
 }
 
 const pyroReducer = (state,action) => {
 
     switch (action.type) {
+
+        case 'SET_BREAKPOINT':
+            let SET_BREAKPOINT = {...state}
+            SET_BREAKPOINT.breakpoint = action.payload
+          return SET_BREAKPOINT;
 
         case 'SET_USERNAME':
             let SET_USERNAME = {...state}

@@ -11,7 +11,7 @@ import {
 import { Resizable } from "react-resizable"
 import BasicFrame from './BasicFrame'
 import TypeableField from './TypeableField'
-import ResponsiveFrame from './ResponsiveFrame'
+import ResponsiveFrameCtn from './ResponsiveFrameCtn'
 import MovieSearch from './MovieSearch'
 import IntuitPrivate from './IntuitPrivate'
 
@@ -70,7 +70,7 @@ const Content = () => {
                 <Route path="/" element={<div><h1>Hello World</h1></div>} />
                 <Route path={basicFrameKey} element={<BasicFrame />} />
                 <Route path={typeableField} element={<TypeableField />} />
-                <Route path={responsiveFrame} element={<ResponsiveFrame />} />
+                <Route path={responsiveFrame} element={<ResponsiveFrameCtn />} />
                 <Route path={movieSearch} element={<MovieSearch />} />
                 <Route path="*" element={<IntuitPrivate />} />
               </Routes>
