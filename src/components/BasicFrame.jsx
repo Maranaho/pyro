@@ -6,8 +6,8 @@ const BasicFrame = () => {
 
     const [basicFrameStep,setBasicFrameStep] = useLocalstorageState("basicFrameStep",0)
     const { dispatch } = useContext(PyroContext)
-    const defaultWidth = [500,200,500]
-    const defaultHeight = [500,200,500]
+    const defaultWidth = [500,200,200]
+    const defaultHeight = [500,200,200]
     const width = "100%"
     const height = "100%"
     const style = [
@@ -34,10 +34,12 @@ const BasicFrame = () => {
     }
 
     useEffect(()=>{
-        dispatch({type:'SET_FILE_BG',payload:bg[basicFrameStep === -1 ?0:basicFrameStep]})
-        dispatch({type:'SET_WIDTH',payload:defaultWidth[basicFrameStep === -1 ?0:basicFrameStep]})
-        dispatch({type:'SET_HEIGHT',payload:defaultHeight[basicFrameStep === -1 ?0:basicFrameStep]})
-        incrementLayout()
+        let step = basicFrameStep === -1 ? 0 : basicFrameStep
+        dispatch({type:'SET_FILE_BG',payload:bg[step]})
+        dispatch({type:'SET_WIDTH',payload:defaultWidth[step]})
+        dispatch({type:'SET_HEIGHT',payload:defaultHeight[step]})
+        // incrementLayout()
+        window.addEventListener('beforeunload', incrementLayout)
     },[])
     
     return (

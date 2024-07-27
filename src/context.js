@@ -53,7 +53,11 @@ const pyroReducer = (state,action) => {
             SET_HEIGHT.protoHeight = action.payload
         return SET_HEIGHT;
 
-        case "SET_FILE_BG": return {...state,fileBG:action.payload}
+        case "SET_FILE_BG": {
+          console.log(action.payload);
+          return {...state,fileBG:action.payload}
+        }
+
         case "USER": return {...state,user:action.payload}
             
         default: {
