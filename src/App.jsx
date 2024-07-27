@@ -1,4 +1,4 @@
-import { useReducer,useState,useEffect } from 'react'
+import { useReducer,useEffect } from 'react'
 import { PyroContext,pyroReducer, initialState } from './context.js'
 import { useLocalstorageState } from "rooks"
 import getRandomNb from "./utils/getRandomNb" 
@@ -13,21 +13,21 @@ const App = () => {
   const max = 2400
   const [state,dispatch] = useReducer(pyroReducer,initialState)
   const [topbarGone,setTopbarGone] = useLocalstorageState("topbarGone",false)
-  const [loaded,setLoaded] = useState(false)
   const handleKeyDown = e =>{
     if(e.key === "f" && e.target.classList.contains("Pyro")){
       setTopbarGone(!topbarGone)
     }
   }
 const handleMove = () =>{
-  if(!loaded)time = setTimeout(()=>{
-    setLoaded(true)
+  if(!state.loaded)time = setTimeout(()=>{
+    dispatch({type:"LOAD",payload:true})
   },getRandomNb(min,max))
 } 
 
 useEffect(()=>{
   return ()=> clearTimeout(time)
 },[])
+
   return (  
     <PyroContext.Provider value={{state,dispatch}}>
       <main
@@ -38,7 +38,7 @@ useEffect(()=>{
         className={`Pyro ${topbarGone?"topbarGone":""}`}
       >
         <Topbar/>
-        {loaded?<Content/>:<Loading/>}
+        {state.loaded?<Content/>:<Loading/>}
       </main>
     </PyroContext.Provider>
   )

@@ -12,7 +12,7 @@ import { Resizable } from "react-resizable"
 import BasicFrame from './BasicFrame'
 import TypeableField from './TypeableField'
 import ResponsiveFrameCtn from './ResponsiveFrameCtn'
-import MovieSearch from './MovieSearch'
+import TemplateSearch from './TemplateSearch'
 import IntuitPrivate from './IntuitPrivate'
 
 import '../resize.css'
@@ -21,13 +21,13 @@ const fileKeys = {
   basicFrameKey:"OUFQg2oawakojO7YiRbfSg-pyro",
   typeableField:"OUFQg2oawakojO7YiRbfSg-typeable-field",
   responsiveFrame:"OUFQg2oawakojO7YiRbfSg-responsive-frame",
-  movieSearch:"OUFQg2oawakojO7YiRbfSg-movie-search"
+  templateSearch:"OUFQg2oawakojO7YiRbfSg-template-search"
 }
 const {
   basicFrameKey,
   typeableField,
   responsiveFrame,
-  movieSearch,
+  templateSearch,
 } = fileKeys
 
 const Content = () => {
@@ -52,6 +52,7 @@ const Content = () => {
   useEffect(()=>{
     setTopGap(topbarGone?0:40)
   },[topbarGone])
+  
   return (  
     <BrowserRouter>
         <Resizable
@@ -71,7 +72,7 @@ const Content = () => {
                 <Route path={basicFrameKey} element={<BasicFrame />} />
                 <Route path={typeableField} element={<TypeableField />} />
                 <Route path={responsiveFrame} element={<ResponsiveFrameCtn />} />
-                <Route path={movieSearch} element={<MovieSearch />} />
+                <Route path={templateSearch} element={<TemplateSearch />} />
                 <Route path="*" element={<IntuitPrivate />} />
               </Routes>
           </div>

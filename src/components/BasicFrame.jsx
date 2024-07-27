@@ -37,8 +37,7 @@ const BasicFrame = () => {
         dispatch({type:'SET_FILE_BG',payload:bg[basicFrameStep]})
         dispatch({type:'SET_WIDTH',payload:defaultWidth[basicFrameStep]})
         dispatch({type:'SET_HEIGHT',payload:defaultHeight[basicFrameStep]})
-
-        window.addEventListener('beforeunload', incrementLayout)
+        incrementLayout()
     },[])
     
     return (

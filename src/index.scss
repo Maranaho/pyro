@@ -9,6 +9,13 @@ $darkteal:#357379;
 $darkblue:#1F3E88;
 $darkpurple:#492B89;
 .darkGradient{ background: linear-gradient(to right, $darkteal,$darkblue,$darkpurple) }
+.diagonalGradient {
+    background: linear-gradient(to bottom right,
+      #59C1C8 0%,
+      #3069E1 38%,
+      #7946E4 76%
+    )
+  }
 
 .shortGradient{ background: linear-gradient(to right, #58BECA,#489DD3) }
 .blackNav{ 
@@ -121,13 +128,13 @@ nav {
         font-size: 15px;
         line-height: 35px;
     }
-    .input {
-        border: 1px solid #D5D5D5;
-        border-radius: 18px;
-        min-height: 73px;
-        box-sizing: border-box;
-        padding: 10px;
-    }
+}
+.input {
+    border: 1px solid #D5D5D5;
+    border-radius: 18px;
+    min-height: 73px;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .btn {
@@ -392,4 +399,78 @@ nav {
     width: 327px;
     padding: 10px;
     background: #282828;
+}
+
+.TemplateSearch {
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.TemplateHeader {
+    padding: 90px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    > span {
+        line-height: 47px;
+        font-size: 3.3em;
+        font-weight: 300;
+        color: #fff;
+    }
+}
+
+.searchCtn {
+    display: flex;
+    max-width: 370px;
+    border-radius: 50px;
+    background: #fff;
+    border: 1px solid #fff;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 10px;
+    &:focus-within{
+        border: 1px solid #42a5f5;
+        box-shadow: 0 0 0 2px #42a5f5;
+    }
+    .searchInput{
+        height: 33px;
+        display: flex;
+        align-items: center;
+        background: none;
+        outline: none;
+        border: 1px solid #ffffff00;
+        box-sizing: border-box;
+        flex: 1;
+        &:focus{box-shadow: none}
+    }
+}
+
+.TemplateList {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    &.centered{max-width: 895px}
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        > span {
+            font-size: 1.3em;
+        }
+    }
 }

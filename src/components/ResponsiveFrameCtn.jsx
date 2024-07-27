@@ -27,8 +27,7 @@ const ResponsiveFrameCtn = () => {
     useEffect(()=>{
         dispatch({type:'SET_WIDTH',payload:width})
         dispatch({type:'SET_HEIGHT',payload:height})
-
-        window.addEventListener('beforeunload', incrementLayout)
+        incrementLayout()
     },[])
 
     useEffect(()=>{
