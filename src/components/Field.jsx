@@ -8,7 +8,7 @@ const Field = () => {
     const { dispatch } = useContext(PyroContext)
     const [_,setFieldView] = useLocalstorageState("fieldView",0)
     const [typeableFieldStep] = useLocalstorageState("typeableFieldStep",0)
-    const placeholders = [null,null,"Your beautiful name","Your beautiful name..."]
+    const placeholders = [null,null,"Your beautiful name","Your beautiful name...","Your beautiful name...","Your beautiful name...","Your beautiful name..."]
     const currentPlaceholder = placeholders[typeableFieldStep]
     const inputType = typeableFieldStep > 3 ? "password":"text"
     const buttonIsActive = typeableFieldStep > 4
