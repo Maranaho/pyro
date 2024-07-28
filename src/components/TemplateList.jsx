@@ -19,7 +19,11 @@ const TemplateList = () => {
                 const { label,thumb } = templates[templateName]
                 return (
                     <div key={templateName}>
-                        <img src={thumb}/>
+                        <img
+                            width="200"
+                            height="145"
+                            src={thumb}
+                        />
                         <span>{label}</span>
                     </div>
                 )
