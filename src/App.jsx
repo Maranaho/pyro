@@ -9,8 +9,8 @@ import Loading from './components/Loading'
 
 const App = () => {
   let time
-  const min = 600
-  const max = 2400
+  const min = 1800
+  const max = 3800
   const [state,dispatch] = useReducer(pyroReducer,initialState)
   const [topbarGone,setTopbarGone] = useLocalstorageState("topbarGone",false)
   const handleKeyDown = e =>{
