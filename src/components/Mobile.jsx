@@ -25,10 +25,10 @@ const Mobile = () => {
                 <div className="logoCtn">
                     <img
                         className="canvalogo"
-                        src={responsiveFrameStep>0?canvalogogradient:canvalogo}
+                        src={canvalogo}
                     />
                 </div>
-                <div className={`tileCtn ${responsiveFrameStep > 1 ? "second":""}`}>
+                <div className="tileCtn">
                     <div className="tile"/>
                     <div className="tile"/>
                 </div>

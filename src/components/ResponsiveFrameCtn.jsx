@@ -10,7 +10,7 @@ const ResponsiveFrameCtn = () => {
     const [responsiveFrameStep,setResponsiveFrameStep] = useLocalstorageState("responsiveFrameStep",0)
     const { state:{ protoWidth },dispatch } = useContext(PyroContext)
     
-    const steps = 5
+    const steps = 1
     const width = 259
     const height = 608
     const breakpoints = [259,1200,1610]

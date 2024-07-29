@@ -10,7 +10,7 @@ const ResponsiveFrame = () => {
     
     const { state:{ breakpoint } } = useContext(PyroContext)
     const [responsiveFrameStep] = useLocalstorageState("responsiveFrameStep",0)
-    const isResponsive = responsiveFrameStep > 2
+    const isResponsive = responsiveFrameStep > 0
 
     if(!isResponsive) return  <Mobile/>
     switch (breakpoint) {
