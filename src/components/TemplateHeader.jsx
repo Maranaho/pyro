@@ -17,7 +17,7 @@ const TemplateHeader = () => {
                     <input
                         className="searchInput"
                         value={searchValue}
-                        placeholder={templateStep > 1?"Search your content":null}
+                        placeholder={templateStep > 1?"Search your content...":null}
                         onChange={e=>dispatch({type:"SET_SEARCHVALUE",payload:e.target.value})}
                     />
                 ):<div className="searchInput"/>}
