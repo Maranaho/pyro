@@ -1,11 +1,11 @@
-import canvalogo from "../assets/svg/canvalogo.svg" 
+import pyrologo from "../assets/svg/pyro_logo1.svg" 
 
 const TabletContent = () => (
     <div className="TabletContent">
         <div className="logoCtn">
             <img
-                className="canvalogo"
-                src={canvalogo}
+                className="pyrologo"
+                src={pyrologo}
             />
         </div>
         <div className="tileCtn">

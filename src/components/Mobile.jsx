@@ -1,6 +1,4 @@
-import { useLocalstorageState } from "rooks"
-import canvalogo from "../assets/svg/canvalogo.svg" 
-import canvalogogradient from "../assets/svg/canvalogogradient.svg" 
+import pyrologo from "../assets/svg/pyro_logo1.svg" 
 import crop from "../assets/svg/crop.svg" 
 import align from "../assets/svg/align.svg" 
 import close from "../assets/svg/close.svg" 
@@ -11,7 +9,6 @@ import copy from "../assets/svg/copy.svg"
 
 const Mobile = () => {
     
-    const [responsiveFrameStep] = useLocalstorageState("responsiveFrameStep",0)
     return (
         <div className="Mobile">
             <div className="lightGradient MobileHead">
@@ -24,8 +21,8 @@ const Mobile = () => {
             <div className="mainContent">
                 <div className="logoCtn">
                     <img
-                        className="canvalogo"
-                        src={canvalogo}
+                        className="pyrologo"
+                        src={pyrologo}
                     />
                 </div>
                 <div className="tileCtn">

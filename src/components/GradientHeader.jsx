@@ -11,7 +11,7 @@ const GradientHeader = ({desktop}) => {
                 <div className="darkGradient header1">
                     <div className="tabs">
                         <div className="tab shortGradient">
-                            <span>Naho @ Canva</span>
+                            <span>Pyro</span>
                             <img src={close}/>
                         </div>
                         {desktop?(

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 .lightGradient {
-  background: linear-gradient(to right, #59C1C8, #3069E1, #7946E4);
+  background: linear-gradient(to right, #FFA0C8, #B26DDA);
 }
 
 .darkGradient {
-  background: linear-gradient(to right, #357379, #1F3E88, #492B89);
+  background: linear-gradient(to right, #99617A, #6B4283);
 }
 
 .diagonalGradient {
@@ -12,7 +12,7 @@
 }
 
 .shortGradient {
-  background: linear-gradient(to right, #58BECA, #489DD3);
+  background: linear-gradient(to right, #F89BCB, #F297CC);
 }
 
 .blackNav {

@@ -2,13 +2,15 @@
 
 $teal:#59C1C8;
 $blue:#3069E1;
-$purple:#7946E4;
-.lightGradient{ background: linear-gradient(to right, $teal,$blue,$purple) }
+$pink:#FFA0C8;
+$purple:#B26DDA;
+.lightGradient{ background: linear-gradient(to right, $pink,$purple) }
 
 $darkteal:#357379;
+$darkpink:#99617A;
 $darkblue:#1F3E88;
-$darkpurple:#492B89;
-.darkGradient{ background: linear-gradient(to right, $darkteal,$darkblue,$darkpurple) }
+$darkpurple:#6B4283;
+.darkGradient{ background: linear-gradient(to right, $darkpink,$darkpurple) }
 .diagonalGradient {
     background: linear-gradient(to bottom right,
       #59C1C8 0%,
@@ -17,7 +19,7 @@ $darkpurple:#492B89;
     )
   }
 
-.shortGradient{ background: linear-gradient(to right, #58BECA,#489DD3) }
+.shortGradient{ background: linear-gradient(to right, #F89BCB,#F297CC) }
 .blackNav{ 
     display: flex;
     background: #0D0D0D;
